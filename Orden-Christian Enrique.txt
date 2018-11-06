@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS barManagement;
+USE barManagement;
+
+CREATE TABLE Orden(
+id_orden int PRIMARY KEY NOT NULL,
+fecha_de_pedido date NOT NULL,
+id_mesa int NOT NULL,
+id_producto int NOT NULL,
+cantidad int NULL,
+precio int NULL,
+total int NULL,
+tipo_de_pago varchar(8) 
+);
