@@ -1,0 +1,11 @@
+
+USE barManagement;
+
+CREATE TABLE usuario(
+Id int PRIMARY KEY NOT NULL,
+Nombre varchar(40) NOT NULL,
+Tipo varchar(20) NOT NULL,
+Cargo varchar(20) NOT NULL,
+Turno varchar(20) NOT NULL,
+Telefono varchar(20) NOT NULL
+);
