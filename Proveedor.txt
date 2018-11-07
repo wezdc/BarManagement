@@ -1,4 +1,4 @@
-CREATE TABLE proveedor
+CREATE TABLE IF NOT EXISTS proveedor
 (
 id_proveedor int PRIMARY KEY IDENTITY NOT NULL,
 nombre_proveedor varchar (50) NOT NULL,
