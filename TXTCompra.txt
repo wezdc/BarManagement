@@ -1,12 +1,22 @@
 
 USE barManagement;
 
-CREATE TABLE Compra(
-id_Compra int PRIMARY KEY NOT NULL,
-no_piezas int NOT NULL,
-precio int NOT NULL,
-id_producto int NOT NULL,
-total int NOT NULL,
+CREATE TABLE IF NOT EXIST compra(
+id_compra int PRIMARY KEY NOT NULL,
+fecha_compra datetime NOT NULL,
+id_proveedor int NOT NULL,
+id_usuario int NOT NULL,
+total decimal(2) NOT NULL
+);
 
-)
+CREATE TABLE IF NOT EXIST productos_compra(
+id_productos_compra int PRIMARY KEY NOT NULL,
+id_compra int NOT NULL,
+id_producto int NOT NULL,
+desc_producto varchar(30) NOT NULL,
+cantidad int NOT NULL,
+precio decimal(2) NOT NULL,
+subtotal decimal(2) NOT NULL
+);
+
 
