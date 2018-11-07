@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `ingredientes`
 --
 
-CREATE TABLE `ingredientes` (
+CREATE TABLE if not exist `ingredientes` (
   `Id_ingrediente` int(11) NOT NULL,
   `Nombre_Ingre` varchar(100) NOT NULL,
   `Tipo_Ingre` varchar(100) NOT NULL,
