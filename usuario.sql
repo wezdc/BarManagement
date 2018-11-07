@@ -28,13 +28,12 @@ SET time_zone = "+00:00";
 -- Table structure for table `usuario`
 --
 
-CREATE TABLE `usuario` (
-  `id` int(1) NOT NULL,
+CREATE TABLE IF NOT EXIST`usuario` (
+  `id` int(1) PRIMARY KEY IDENTITY NOT NULL,
   `nombre` varchar(40) NOT NULL,
   `tipo` varchar(20) NOT NULL,
-  `cargo` varchar(20) NOT NULL,
-  `turno` varchar(20) NOT NULL,
-  `telefono` varchar(20) NOT NULL
+  `password` varchar(20) NOT NULL,
+  `telefono` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
