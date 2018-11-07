@@ -1,0 +1,9 @@
+CREATE TABLE proveedor
+(
+id_Proveedor int PRIMARY KEY IDENTITY NOT NULL,
+Nombre_Proveedor varchar (50) NOT NULL,
+Tipo_Proveedor varchar (50) NOT NULL,
+Nombre_Empresa varchar (50) NOT NULL,
+Direccion varchar (30) NOT NULL,
+Telefono int NULL
+)
