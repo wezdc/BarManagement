@@ -1,24 +1,21 @@
-CREATE TABLE IF NOT EXIST VENTAS
-(
-  id_venta int PRIMARY KEY IDENTITY NOT NULL,
-  status bit DEFAULT 0,
-  fecha_venta datetime NOT NULL,
---Foreign Keys
-  id_venta int NOT NULL,
-  id_usuario int NOT NULL,
-  id_cliente int NOT NULL,
-  
-  total_Venta float(2), 
+USE barManagement;
+
+CREATE TABLE IF NOT EXIST venta(
+id_venta int PRIMARY KEY IDENTITY NOT NULL,
+status varchar(15) DEFAULT "",
+fecha_venta datetime NOT NULL,
+id_cliente int NOT NULL,
+id_usuario int NOT NULL,
+total decimal(2) NOT NULL
 );
 
-CREATE TABLE IF NOT EXIST PRODUCTOS VENTA
-(
-  id_productos_venta int PRIMARY KEY IDENTITY NOT NULL,
---Foreign Keys  
-  id_venta int NOT NULL,
-  id_producto int NOT NULL,
-  descripcion varchar(20) NOT NULL,
-  cantidad int NOT NULL,
-  precio float(2) NOT NULL,
-  subtotal float(2) NOT NULL
-)
+
+CREATE TABLE IF NOT EXIST productos_venta(
+id_productos_venta int PRIMARY KEY IDENTITY NOT NULL,
+id_venta int NOT NULL,
+id_producto int NOT NULL,
+desc_venta varchar(30) NOT NULL,
+cantidad int NOT NULL,
+precio decimal(2) NOT NULL,
+subtotal decimal(2) NOT NULL
+);
