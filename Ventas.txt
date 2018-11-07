@@ -2,7 +2,7 @@ USE barManagement;
 
 CREATE TABLE IF NOT EXIST venta(
 id_venta int PRIMARY KEY IDENTITY NOT NULL,
-status varchar(15) DEFAULT "",
+status varchar(15) DEFAULT "iniciada",
 fecha_venta datetime NOT NULL,
 id_cliente int NOT NULL,
 id_usuario int NOT NULL,
