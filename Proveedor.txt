@@ -1,9 +1,0 @@
-CREATE TABLE IF NOT EXISTS proveedor
-(
-id_proveedor int PRIMARY KEY IDENTITY NOT NULL,
-nombre_proveedor varchar (50) NOT NULL,
-tipo_proveedor varchar (50) NOT NULL,
-nombre_representante varchar (50) NOT NULL,
-direccion varchar (30) NOT NULL,
-telefono varchar(15) NULL
-);
