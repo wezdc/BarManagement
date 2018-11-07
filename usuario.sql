@@ -29,12 +29,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `usuario` (
-  `Id` int(1) NOT NULL,
-  `Nombre` varchar(40) NOT NULL,
-  `Tipo` varchar(20) NOT NULL,
-  `Cargo` varchar(20) NOT NULL,
-  `Turno` varchar(20) NOT NULL,
-  `Telefono` varchar(20) NOT NULL
+  `id` int(1) NOT NULL,
+  `nombre` varchar(40) NOT NULL,
+  `tipo` varchar(20) NOT NULL,
+  `cargo` varchar(20) NOT NULL,
+  `turno` varchar(20) NOT NULL,
+  `telefono` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE `usuario` (
 -- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
