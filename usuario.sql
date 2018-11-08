@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2018 at 04:35 PM
+-- Generation Time: Nov 08, 2018 at 06:31 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -28,12 +28,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `usuario`
 --
 
-CREATE TABLE IF NOT EXIST`usuario` (
-  `id` int(1) PRIMARY KEY IDENTITY NOT NULL,
-  `nombre` varchar(40) NOT NULL,
+CREATE TABLE `usuario` (
+  `id` int(1) NOT NULL,
+  `status` varchar(10) NOT NULL,
   `tipo` varchar(20) NOT NULL,
+  `nombre` varchar(40) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `telefono` varchar(15) NOT NULL
+  `telefono` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -54,7 +55,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `Id` int(1) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
